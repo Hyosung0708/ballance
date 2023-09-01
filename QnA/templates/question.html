@@ -2,6 +2,22 @@
 
 {% block body %}
 
-    {{question.content}}
+<div class="container text-center">
+    <div class="row">
+      <div class="col">
+        {{question.content}}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        {{question.option1}} <br>
+        <button href="{% url 'QnA:next_question' q_id=q_id %}" type="button" class="btn btn-primary btn-lg">Large button</button>
+      </div>
+      <div class="col">
+        {{question.option2}} <br>
+        <button href="{% url 'QnA:next_question' q_id=q_id %}" type="button" class="btn btn-primary btn-lg">Large button</button>
+      </div>
+    </div>
+</div>
     
 {% endblock %}
